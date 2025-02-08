@@ -1,0 +1,7 @@
+{
+  "Naz's git config": {
+    "prefix": "gitnaz",
+    "body": ["[user]", "  name = Naz", "  email = ndpm13@ch-naseem.com"],
+    "description": "Naz's git config"
+  }
+}

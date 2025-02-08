@@ -1,0 +1,21 @@
+{
+  "BaseAuditEntity fields": {
+    "prefix": "sqlbae",
+    "body": [
+      "-- BaseAuditEntity fields",
+      "creator INT NOT NULL, -- FK to users.user_id",
+      "date_created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,",
+      "changed_by INT DEFAULT NULL, -- FK to users.user_id",
+      "date_changed TIMESTAMP DEFAULT NULL,",
+      "voided BOOLEAN NOT NULL DEFAULT FALSE,",
+      "voided_by INT DEFAULT NULL, -- FK to users.user_id",
+      "date_voided TIMESTAMP DEFAULT NULL,",
+      "void_reason VARCHAR(256) DEFAULT NULL,",
+      "uuid UUID NOT NULL DEFAULT gen_random_uuid () UNIQUE,",
+      "CONSTRAINT fk_${0}_creator FOREIGN KEY (creator) REFERENCES users (user_id),",
+      "CONSTRAINT fk_${0}_changed_by FOREIGN KEY (changed_by) REFERENCES users (user_id),",
+      "CONSTRAINT fk_${0}_voided_by FOREIGN KEY (voided_by) REFERENCES users (user_id)"
+    ],
+    "description": "BaseAuditEntity fields"
+  }
+}
