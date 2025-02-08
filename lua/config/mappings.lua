@@ -71,3 +71,10 @@ vim.api.nvim_set_keymap("v", "<leader>s", ":'<,'>Silicon<CR>", { noremap = true,
 vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Live Grep" })
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Buffers" })
+
+-- nvim-tmux-navigation keymaps
+
+vim.keymap.set("n", "<C-h>", require("nvim-tmux-navigation").NvimTmuxNavigateLeft, { desc = "Tmux Navigate Left" })
+vim.keymap.set("n", "<C-j>", require("nvim-tmux-navigation").NvimTmuxNavigateDown, { desc = "Tmux Navigate Down" })
+vim.keymap.set("n", "<C-k>", require("nvim-tmux-navigation").NvimTmuxNavigateUp, { desc = "Tmux Navigate Up" })
+vim.keymap.set("n", "<C-l>", require("nvim-tmux-navigation").NvimTmuxNavigateRight, { desc = "Tmux Navigate Right" })
