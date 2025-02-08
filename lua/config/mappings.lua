@@ -2,26 +2,26 @@
 
 vim.api.nvim_set_keymap("n", "<leader>p", ":tabnext<CR>", { noremap = true, silent = true, desc = "Next Tab" })
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>n",
-	":vsplit<CR>:wincmd l<CR>",
-	{ noremap = true, silent = true, desc = "Split Right" }
+  "n",
+  "<leader>n",
+  ":vsplit<CR>:wincmd l<CR>",
+  { noremap = true, silent = true, desc = "Split Right" }
 )
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>m",
-	":split<CR>:wincmd j<CR>",
-	{ noremap = true, silent = true, desc = "Split Down" }
+  "n",
+  "<leader>m",
+  ":split<CR>:wincmd j<CR>",
+  { noremap = true, silent = true, desc = "Split Down" }
 )
 vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true, desc = "Clear Search" })
 
 -- bufferline keymaps
 
 vim.api.nvim_set_keymap(
-	"n",
-	"<leader>C",
-	":BufferLineCloseOthers<CR>",
-	{ noremap = true, silent = true, desc = "Close Other Buffers" }
+  "n",
+  "<leader>C",
+  ":BufferLineCloseOthers<CR>",
+  { noremap = true, silent = true, desc = "Close Other Buffers" }
 )
 
 -- nvim-dap keymaps
@@ -43,18 +43,18 @@ vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "LSP Format" })
 -- harpoon keymaps
 
 vim.keymap.set("n", "<leader>a", function()
-	require("harpoon"):list():add()
+  require("harpoon"):list():add()
 end, { desc = "Harpoon Add" })
 vim.keymap.set("n", "<leader>h", function()
-	require("harpoon").ui:toggle_quick_menu(builtin:list())
+  require("harpoon").ui:toggle_quick_menu(builtin:list())
 end, { desc = "Harpoon Menu" })
 
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<leader><S-P>", function()
-	require("harpoon"):list():prev()
+  require("harpoon"):list():prev()
 end, { desc = "Harpoon Previous" })
 vim.keymap.set("n", "<leader><S-N>", function()
-	require("harpoon"):list():next()
+  require("harpoon"):list():next()
 end, { desc = "Harpoon Next" })
 
 -- neotree keymaps
@@ -78,3 +78,8 @@ vim.keymap.set("n", "<C-h>", require("nvim-tmux-navigation").NvimTmuxNavigateLef
 vim.keymap.set("n", "<C-j>", require("nvim-tmux-navigation").NvimTmuxNavigateDown, { desc = "Tmux Navigate Down" })
 vim.keymap.set("n", "<C-k>", require("nvim-tmux-navigation").NvimTmuxNavigateUp, { desc = "Tmux Navigate Up" })
 vim.keymap.set("n", "<C-l>", require("nvim-tmux-navigation").NvimTmuxNavigateRight, { desc = "Tmux Navigate Right" })
+
+-- ufo keymaps
+
+vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
