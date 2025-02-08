@@ -61,3 +61,7 @@ end, { desc = "Harpoon Next" })
 
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle Neotree Filesystem" })
 vim.keymap.set("n", "<C-b>", ":Neotree buffers toggle float<CR>", { desc = "Toggle Neotree Buffers" })
+
+-- silicon keymaps
+
+vim.api.nvim_set_keymap("v", "<leader>s", ":'<,'>Silicon<CR>", { noremap = true, silent = true, desc = "Silicon" })
