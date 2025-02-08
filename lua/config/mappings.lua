@@ -14,3 +14,8 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true, desc = "Split Down" }
 )
 vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true, desc = "Clear Search" })
+
+
+-- bufferline keymaps
+
+vim.api.nvim_set_keymap("n", "<leader>C", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true, desc = "Close Other Buffers" })
