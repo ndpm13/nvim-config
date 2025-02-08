@@ -65,3 +65,9 @@ vim.keymap.set("n", "<C-b>", ":Neotree buffers toggle float<CR>", { desc = "Togg
 -- silicon keymaps
 
 vim.api.nvim_set_keymap("v", "<leader>s", ":'<,'>Silicon<CR>", { noremap = true, silent = true, desc = "Silicon" })
+
+-- telescope keymaps
+
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find Files" })
+vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, { desc = "Live Grep" })
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Buffers" })
