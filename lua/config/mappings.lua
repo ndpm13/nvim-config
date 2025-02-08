@@ -56,3 +56,8 @@ end, { desc = "Harpoon Previous" })
 vim.keymap.set("n", "<leader><S-N>", function()
 	require("harpoon"):list():next()
 end, { desc = "Harpoon Next" })
+
+-- neotree keymaps
+
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle Neotree Filesystem" })
+vim.keymap.set("n", "<C-b>", ":Neotree buffers toggle float<CR>", { desc = "Toggle Neotree Buffers" })
