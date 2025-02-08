@@ -39,3 +39,20 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Definition" })
 vim.keymap.set("n", "er", vim.diagnostic.open_float, { desc = "LSP Diagnostics" })
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "LSP Format" })
+
+-- harpoon keymaps
+
+vim.keymap.set("n", "<leader>a", function()
+	require("harpoon"):list():add()
+end, { desc = "Harpoon Add" })
+vim.keymap.set("n", "<leader>h", function()
+	require("harpoon").ui:toggle_quick_menu(builtin:list())
+end, { desc = "Harpoon Menu" })
+
+-- Toggle previous & next buffers stored within Harpoon list
+vim.keymap.set("n", "<leader><S-P>", function()
+	require("harpoon"):list():prev()
+end, { desc = "Harpoon Previous" })
+vim.keymap.set("n", "<leader><S-N>", function()
+	require("harpoon"):list():next()
+end, { desc = "Harpoon Next" })
