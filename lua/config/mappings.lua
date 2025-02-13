@@ -46,15 +46,15 @@ vim.keymap.set("n", "<leader>a", function()
   require("harpoon"):list():add()
 end, { desc = "Harpoon Add" })
 vim.keymap.set("n", "<leader>h", function()
-  require("harpoon").ui:toggle_quick_menu(builtin:list())
+  require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
 end, { desc = "Harpoon Menu" })
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<leader><S-P>", function()
-  require("harpoon"):list():prev()
-end, { desc = "Harpoon Previous" })
-vim.keymap.set("n", "<leader><S-N>", function()
-  require("harpoon"):list():next()
+-- vim.keymap.set("n", "<leader><S-P>", function()
+--   require("harpoon"):list():prev({ ui_nav_wrap = true })
+-- end, { desc = "Harpoon Previous" })
+vim.keymap.set("n", "<C-p>", function()
+  require("harpoon"):list():next({ ui_nav_wrap = true })
 end, { desc = "Harpoon Next" })
 
 -- neotree keymaps
