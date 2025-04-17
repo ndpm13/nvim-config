@@ -4,7 +4,6 @@
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
   "cmp_luasnip": { "branch": "master", "commit": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90" },
-  "codeium.vim": { "branch": "main", "commit": "272c6e2755e8faa90e26bcdcd9fde6b9e61751ea" },
   "friendly-snippets": { "branch": "main", "commit": "31f2a2657b6261724313281fe0d8ba6f43f4a4fa" },
   "gitsigns.nvim": { "branch": "main", "commit": "d600d3922c1d001422689319a8f915136bb64e1e" },
   "gruvbox": { "branch": "main", "commit": "a933d8666dad9363dc6908ae72cfc832299c2f59" },
@@ -40,5 +39,6 @@
   "vim-dadbod": { "branch": "master", "commit": "9f0ca8bcef704659820a95c3bbd2c262583a66a1" },
   "vim-dadbod-completion": { "branch": "master", "commit": "a8dac0b3cf6132c80dc9b18bef36d4cf7a9e1fe6" },
   "vim-dadbod-ui": { "branch": "master", "commit": "460432301a5cb280ea265ddfa15c9f3dcd1d26b7" },
-  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
+  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
+  "windsurf.vim": { "branch": "main", "commit": "272c6e2755e8faa90e26bcdcd9fde6b9e61751ea" }
 }
