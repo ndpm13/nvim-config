@@ -21,6 +21,7 @@ return {
 					"ts_ls",
 					"clangd",
 					"tailwindcss",
+          "gopls",
 				},
 			})
 		end,
@@ -43,6 +44,7 @@ return {
 				"clangd",
 				"clangd",
 				"tailwindcss",
+        "gopls",
 			}
 
 			for _, lsp in ipairs(servers) do
