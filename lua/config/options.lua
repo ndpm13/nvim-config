@@ -35,3 +35,6 @@ vim.api.nvim_set_keymap("n", "<Space>", "", { desc = "Leader" })
 
 vim.o.termguicolors = true
 vim.o.background = "dark"
+
+-- disable codeium by default
+vim.g.codeium_enabled = false
