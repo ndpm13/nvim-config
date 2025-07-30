@@ -1,7 +1,14 @@
 {
   "Naz's git config": {
     "prefix": "gitnaz",
-    "body": ["[user]", "  name = Naz", "  email = ndpm13@ch-naseem.com"],
+    "body": [
+      "[user]",
+      "  name = Naz",
+      "  email = ndpm13@ch-naseem.com",
+      "	signingkey = 42508039D5D91EF2B88946A39E78923117CD6639",
+      "[commit]",
+      "	gpgsign = true"
+    ],
     "description": "Naz's git config"
   }
 }
